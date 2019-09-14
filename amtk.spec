@@ -5,12 +5,12 @@
 Summary:	Amtk - Actions, Menus and Toolbars Kit for GTK+ applications
 Summary(pl.UTF-8):	Amtk - zestaw akcji, menu i pasków narzędzi dla aplikacji GTK+
 Name:		amtk
-Version:	5.0.0
+Version:	5.0.1
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/amtk/5.0/%{name}-%{version}.tar.xz
-# Source0-md5:	11b8cd23e99728b127476fa7505eb818
+# Source0-md5:	f2cb361b03d4553d3463481c96211f76
 URL:		https://wiki.gnome.org/Projects/Amtk
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.14
