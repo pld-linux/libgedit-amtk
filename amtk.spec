@@ -5,23 +5,23 @@
 Summary:	Amtk - Actions, Menus and Toolbars Kit for GTK+ applications
 Summary(pl.UTF-8):	Amtk - zestaw akcji, menu i pasków narzędzi dla aplikacji GTK+
 Name:		amtk
-Version:	5.0.2
+Version:	5.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/amtk/5.0/%{name}-%{version}.tar.xz
-# Source0-md5:	a7d6ed00248a5dc8609525971bb5414e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/amtk/5.2/%{name}-%{version}.tar.xz
+# Source0-md5:	8ea25cde8b7bdbf98d7d6c939dea1724
 URL:		https://wiki.gnome.org/Projects/Amtk
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.14
-BuildRequires:	gettext-tools >= 0.19.4
-BuildRequires:	glib2-devel >= 1:2.52
+BuildRequires:	gettext-tools >= 0.19.6
+BuildRequires:	glib2-devel >= 1:2.56
 BuildRequires:	gobject-introspection-devel >= 1.42.0
 BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	gtk-doc >= 1.25
 BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	pkgconfig
-Requires:	glib2 >= 1:2.52
+Requires:	glib2 >= 1:2.56
 Requires:	gtk+3 >= 3.22
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,7 +41,7 @@ Summary:	Header files for Amtk library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Amtk
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.52
+Requires:	glib2-devel >= 1:2.56
 Requires:	gtk+3-devel >= 3.22
 
 %description devel
