@@ -66,9 +66,7 @@ Statyczna biblioteka Amtk.
 Summary:	API documentation for Amtk library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Amtk
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for Amtk library.
