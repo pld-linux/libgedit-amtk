@@ -2,22 +2,22 @@
 # Conditional build:
 %bcond_without	static_libs	# static library
 #
-Summary:	Amtk - Actions, Menus and Toolbars Kit for GTK+ applications
-Summary(pl.UTF-8):	Amtk - zestaw akcji, menu i pasków narzędzi dla aplikacji GTK+
-Name:		amtk
-Version:	5.6.1
+Summary:	libgedit-amtk - Actions, Menus and Toolbars Kit for GTK+ applications
+Summary(pl.UTF-8):	libgedit-amtk - zestaw akcji, menu i pasków narzędzi dla aplikacji GTK+
+Name:		libgedit-amtk
+Version:	5.8.0
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
-Source0:	https://download.gnome.org/sources/amtk/5.6/%{name}-%{version}.tar.xz
-# Source0-md5:	26edf5c301e66a02f0ea7829855807f5
-URL:		https://wiki.gnome.org/Projects/Amtk
+Source0:	https://gedit-technology.net/tarballs/libgedit-amtk/%{name}-%{version}.tar.xz
+# Source0-md5:	1b2ad96c189dd1749b6526c6026e0618
+URL:		https://gedit-technology.net/
 BuildRequires:	gettext-tools >= 0.19.6
 BuildRequires:	glib2-devel >= 1:2.56
 BuildRequires:	gobject-introspection-devel >= 1.42.0
 BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	gtk-doc >= 1.25
-BuildRequires:	meson >= 0.53
+BuildRequires:	meson >= 0.64
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
@@ -26,14 +26,21 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	glib2 >= 1:2.56
 Requires:	gtk+3 >= 3.22
+Obsoletes:	amtk < 5.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+libgedit-amtk is part of Gedit Technology
+<https://gedit-technology.net/>.
+
 Amtk is the acronym for "Actions, Menus and Toolbars Kit". It is a
 basic GtkUIManager replacement based on GAction. It is suitable for
 both a traditional UI or a modern UI with a GtkHeaderBar.
 
 %description -l pl.UTF-8
+libgedit-amtk to część projektu Gedit Technology
+<https://gedit-technology.net/>.
+
 Amtk to krót od "Actions, Menus and Toolbars Kit" (zestaw akcji, menu
 i pasków narzędziowych). Jest to podstawowy zamiennik GtkUIManagera
 oparty na GAction. Nadaje się zarówno dla tradycyjnych, jak i
@@ -46,6 +53,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.56
 Requires:	gtk+3-devel >= 3.22
+Obsoletes:	amtk-devel < 5.8
 
 %description devel
 Header files for Amtk library.
@@ -58,6 +66,7 @@ Summary:	Static Amtk library
 Summary(pl.UTF-8):	Statyczna biblioteka Amtk
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
+Obsoletes:	amtk-static < 5.8
 
 %description static
 Static Amtk library.
@@ -69,6 +78,7 @@ Statyczna biblioteka Amtk.
 Summary:	API documentation for Amtk library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Amtk
 Group:		Documentation
+Obsoletes:	amtk-apidocs < 5.8
 BuildArch:	noarch
 
 %description apidocs
@@ -91,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %ninja_install -C build
 
-%find_lang amtk-5
+%find_lang libgedit-amtk-5
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -99,25 +109,25 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files -f amtk-5.lang
+%files -f libgedit-amtk-5.lang
 %defattr(644,root,root,755)
 %doc NEWS README.md
-%attr(755,root,root) %{_libdir}/libamtk-5.so.0
+%attr(755,root,root) %{_libdir}/libgedit-amtk-5.so.0
 %{_libdir}/girepository-1.0/Amtk-5.typelib
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libamtk-5.so
-%{_includedir}/amtk-5
+%attr(755,root,root) %{_libdir}/libgedit-amtk-5.so
+%{_includedir}/libgedit-amtk-5
 %{_datadir}/gir-1.0/Amtk-5.gir
-%{_pkgconfigdir}/amtk-5.pc
+%{_pkgconfigdir}/libgedit-amtk-5.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libamtk-5.a
+%{_libdir}/libgedit-amtk-5.a
 %endif
 
 %files apidocs
 %defattr(644,root,root,755)
-%{_gtkdocdir}/amtk-5
+%{_gtkdocdir}/libgedit-amtk-5
