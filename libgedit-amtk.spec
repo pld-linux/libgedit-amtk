@@ -5,13 +5,13 @@
 Summary:	libgedit-amtk - Actions, Menus and Toolbars Kit for GTK+ applications
 Summary(pl.UTF-8):	libgedit-amtk - zestaw akcji, menu i pasków narzędzi dla aplikacji GTK+
 Name:		libgedit-amtk
-Version:	5.8.0
+Version:	5.9.0
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
-Source0:	https://gedit-technology.net/tarballs/libgedit-amtk/%{name}-%{version}.tar.xz
-# Source0-md5:	1b2ad96c189dd1749b6526c6026e0618
-URL:		https://gedit-technology.net/
+Source0:	https://download.gnome.org/sources/libgedit-amtk/5.9/%{name}-%{version}.tar.xz
+# Source0-md5:	b48befe78b0be18d8300de52d4119067
+URL:		https://gedit-technology.github.io/
 BuildRequires:	gettext-tools >= 0.19.6
 BuildRequires:	glib2-devel >= 1:2.56
 BuildRequires:	gobject-introspection-devel >= 1.42.0
@@ -31,7 +31,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 libgedit-amtk is part of Gedit Technology
-<https://gedit-technology.net/>.
+<https://gedit-technology.github.io/>.
 
 Amtk is the acronym for "Actions, Menus and Toolbars Kit". It is a
 basic GtkUIManager replacement based on GAction. It is suitable for
@@ -39,7 +39,7 @@ both a traditional UI or a modern UI with a GtkHeaderBar.
 
 %description -l pl.UTF-8
 libgedit-amtk to część projektu Gedit Technology
-<https://gedit-technology.net/>.
+<https://gedit-technology.github.io/>.
 
 Amtk to krót od "Actions, Menus and Toolbars Kit" (zestaw akcji, menu
 i pasków narzędziowych). Jest to podstawowy zamiennik GtkUIManagera
