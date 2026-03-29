@@ -5,13 +5,16 @@
 Summary:	libgedit-amtk - Actions, Menus and Toolbars Kit for GTK+ applications
 Summary(pl.UTF-8):	libgedit-amtk - zestaw akcji, menu i pasków narzędzi dla aplikacji GTK+
 Name:		libgedit-amtk
-Version:	5.9.0
+Version:	5.9.2
 Release:	1
 License:	LGPL v3+
 Group:		Libraries
-Source0:	https://download.gnome.org/sources/libgedit-amtk/5.9/%{name}-%{version}.tar.xz
-# Source0-md5:	b48befe78b0be18d8300de52d4119067
-URL:		https://gedit-technology.github.io/
+#Source0Download: https://gitlab.gnome.org/World/gedit/libgedit-amtk/-/tags
+Source0:	https://gitlab.gnome.org/World/gedit/libgedit-amtk/-/archive/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	dc8d9e0eec988f9581a3cd5e02509e42
+# older versions
+#Source0:	https://download.gnome.org/sources/libgedit-amtk/5.9/%{name}-%{version}.tar.xz
+URL:		https://gedit-text-editor.org/
 BuildRequires:	gettext-tools >= 0.19.6
 BuildRequires:	glib2-devel >= 1:2.56
 BuildRequires:	gobject-introspection-devel >= 1.42.0
@@ -22,8 +25,6 @@ BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 2.042
-BuildRequires:	tar >= 1:1.22
-BuildRequires:	xz
 Requires:	glib2 >= 1:2.56
 Requires:	gtk+3 >= 3.22
 Obsoletes:	amtk < 5.8
